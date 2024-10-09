@@ -24,8 +24,8 @@
             <!-- Viser nettstedets logo. "alt" brukes som alternativ tekst hvis bildet ikke lastes inn, eller for skjermlesere -->
             <nav class="flex-space-b">
                 <!-- Definerer navigasjonsmenyen på nettsiden -->
-                <i class="fa-solid fa-burger"></i>
-                <ul class="flex-menu">
+                <i class="fa-solid fa-burger" onclick="toogleMenu()"></i>
+                <ul class="flex-menu" id="menu">
                     <!-- Lager en liste over menylenker -->
                     <li><a href="#">Nyheter</a></li>
                     <!-- En lenke til nyheter, med en placeholder "#" for URL -->
@@ -142,5 +142,15 @@
             <!-- Enkel tekst som viser nettstedets merkevare og årstall -->
         </footer>
     </div>
+    <script>
+        let toogleMenu = ()=>{
+            let x =document.getElementById("menu")
+            if(x.style.display === "flex"){
+                x.style.display = "none"
+            } else{
+                x.style.display = "flex"
+            }
+        }
+    </script>
 </body>
 </html>
