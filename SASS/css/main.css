@@ -6,8 +6,12 @@
   height: 100%;
 }
 
+.blurred-effect, form {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
 form {
-  background-color: #fff;
   color: black;
   display: flex;
   flex-direction: column;
@@ -19,17 +23,48 @@ form {
   padding: 3rem;
   border-radius: 30px;
 }
-form input {
+form label {
   width: 100%;
   max-width: 100%;
   height: auto;
   padding: 1rem;
-  border-radius: 30px;
-  border: 1px solid black;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  display: flex !important;
+  width: 50px;
+  background-color: black;
+  color: white;
+}
+form label i {
+  width: 100%;
+  max-width: 50px;
+  height: 50px;
+  padding: 0.5rem;
+  border-radius: 100%;
+}
+form label input {
+  border: none;
+}
+form label input {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   background-color: blue;
   height: 100vh;
   font-family: "Roboto", sans-serif;
+  background-image: url("https://picsum.photos/1200/1200");
+  background-size: cover;
 }/*# sourceMappingURL=main.css.map */
